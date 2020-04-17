@@ -33,12 +33,13 @@ exports.result = async (req, res) => {
       console.log(err);
     });
 
-  await asyncForEach(imdb_ids, async (el) => {
+  await asyncForEach(imdb_ids, async (el, i) => {
     const mov_obj = await got(tmdb_endpoint + el + tmdb_params, {
       responseType: 'json',
     }).then((response) => {
       return response.body.movie_results[0];
     });
+    mov_obj.imdb_id = imdb_ids[i];
     ret_arr.push(mov_obj);
   });
 
