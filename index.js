@@ -43,6 +43,7 @@ exports.result = async (req, res) => {
   });
 
   console.log(ret_arr);
+  res.set('Content-Type', 'text/json');
   res.status(200).send(JSON.stringify(ret_arr));
 };
 
