@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node ",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "env-cmd functions-framework --target=result"
   },
   "author": "Ameya Thakur",
   "license": "ISC",
   "dependencies": {
+    "@google-cloud/functions-framework": "^1.5.1",
     "cheerio": "^1.0.0-rc.3",
+    "env-cmd": "^10.1.0",
     "got": "^10.7.0"
   }
 }
