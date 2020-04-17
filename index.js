@@ -43,7 +43,7 @@ exports.result = async (req, res) => {
   });
 
   console.log(ret_arr);
-  res.status(200).send(JSON.stringify(ret_arr.stringify));
+  return JSON.stringify(ret_arr.stringify);
 };
 
 async function asyncForEach(array, callback) {
@@ -51,5 +51,3 @@ async function asyncForEach(array, callback) {
     await callback(array[index], index, array);
   }
 }
-
-main();
