@@ -2,7 +2,8 @@ const cheerio = require('cheerio');
 const got = require('got');
 
 const imdb_endpoint =
-  'https://www.imdb.com/search/title/?title_type=feature&user_rating=5,&num_votes=2500,&countries=in&languages=hi&view=simple&sort=release_date,desc&year=2020';
+  'https://www.imdb.com/search/title/?title_type=feature&user_rating=5,&num_votes=2500,&countries=in&languages=hi&view=simple&sort=release_date,desc&year=' +
+  new Date().getFullYear();
 
 const tmdb_endpoint = 'https://api.themoviedb.org/3/find/';
 const tmdb_params =
