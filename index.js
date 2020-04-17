@@ -43,7 +43,7 @@ exports.result = async (req, res) => {
   });
 
   console.log(ret_arr);
-  res.status(200).send(JSON.stringify(ret_arr.stringify));
+  res.status(200).send(JSON.stringify(ret_arr));
 };
 
 async function asyncForEach(array, callback) {
