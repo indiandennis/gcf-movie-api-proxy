@@ -44,7 +44,7 @@ exports.result = async (req, res) => {
 
   console.log(ret_arr);
   res.set('Content-Type', 'application/json');
-  res.status(200).send(JSON.stringify({ ret_arr }));
+  res.status(200).send(JSON.stringify(ret_arr));
 };
 
 async function asyncForEach(array, callback) {
