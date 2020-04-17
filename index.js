@@ -11,7 +11,7 @@ const tmdb_params =
 const imdb_ids = [];
 const ret_arr = [];
 
-exports.result = (req, res) => {
+exports.result = async (req, res) => {
   await got(imdb_endpoint)
     .then((response) => {
       const $ = cheerio.load(response.body);
@@ -42,8 +42,8 @@ exports.result = (req, res) => {
     ret_arr.push(mov_obj);
   });
 
-    console.log(ret_arr);
-    res.status(200).send(JSON.stringify(ret_arr.stringify));
+  console.log(ret_arr);
+  res.status(200).send(JSON.stringify(ret_arr.stringify));
 };
 
 async function asyncForEach(array, callback) {
