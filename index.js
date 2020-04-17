@@ -6,8 +6,9 @@ const imdb_endpoint =
   new Date().getFullYear();
 
 const tmdb_endpoint = 'https://api.themoviedb.org/3/find/';
+const apikey = process.env.apikey;
 const tmdb_params =
-  '?api_key=***REMOVED***&language=en-US&external_source=imdb_id';
+  '?api_key=' + apikey + '&language=en-US&external_source=imdb_id';
 
 const imdb_ids = [];
 const ret_arr = [];
