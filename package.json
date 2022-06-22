@@ -12,6 +12,6 @@
     "@google-cloud/functions-framework": "^1.5.1",
     "cheerio": "^1.0.0-rc.3",
     "env-cmd": "^10.1.0",
-    "got": "^10.7.0"
+    "got": "^11.8.5"
   }
 }
